@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salon Mirele – Frumusețea începe aici</title>
+  <style>
+    body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #fefefe; color: #333; }
+    header { background-color: #e6b0aa; padding: 20px; text-align: center; color: white; }
+    nav a { margin: 15px; text-decoration: none; color: white; font-weight: bold; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    .hero { background: url('poza-salon.jpg') center/cover no-repeat; height: 300px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2em; }
+    .services ul { list-style: none; padding: 0; }
+    .services li { margin: 10px 0; padding: 10px; background: #f2f2f2; border-left: 5px solid #e6b0aa; }
+    footer { background: #e6b0aa; color: white; text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Salon Mirele</h1>
+  <nav>
+    <a href="#acasa">Acasă</a>
+    <a href="#servicii">Servicii</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#programari">Programări</a>
+    <a href="#despre">Despre</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero" id="acasa">
+  <div>Frumusețea începe aici</div>
+</div>
+
+<section id="servicii" class="services">
+  <h2>Serviciile Noastre</h2>
+  <ul>
+    <li>💇‍♀️ Coafură – de la 80 RON</li>
+    <li>💅 Manichiură & Pedichiură – de la 60 RON</li>
+    <li>💄 Machiaj Profesional – de la 120 RON</li>
+    <li>🧖‍♀️ Tratamente faciale – de la 100 RON</li>
+  </ul>
+</section>
+
+<section id="galerie">
+  <h2>Galerie</h2>
+  <p>Aici vor fi fotografii cu lucrările noastre.</p>
+</section>
+
+<section id="programari">
+  <h2>Programări</h2>
+  <form>
+    <label>Nume: <input type="text" required></label><br><br>
+    <label>Telefon: <input type="tel" required></label><br><br>
+    <label>Serviciu dorit: <input type="text" required></label><br><br>
+    <label>Data și ora: <input type="datetime-local" required></label><br><br>
+    <button type="submit">Trimite</button>
+  </form>
+</section>
+
+<section id="despre">
+  <h2>Despre Salonul Mirele</h2>
+  <p>Suntem o echipă pasionată de frumusețe, oferind servicii de înaltă calitate pentru orice ocazie. Vă așteptăm cu drag!</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📍 Str. Georghe Asachi 52 </p>
+  <p>📞 0765 123 456</p>
+  <p>📧 contact@mirele.ro</p>
+  <p>⏰ Luni–Sâmbătă: 09:00 – 20:00</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Salon Mirele | Urmărește-ne pe Instagram și Facebook!</p>
+</footer>
+
+</body>
+</html>
