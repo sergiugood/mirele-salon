@@ -3,78 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salon Mirele – Frumusețea începe aici</title>
+  <title>MIRELLE – Beauty Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #fefefe; color: #333; }
-    header { background-color: #e6b0aa; padding: 20px; text-align: center; color: white; }
-    nav a { margin: 15px; text-decoration: none; color: white; font-weight: bold; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    .hero { background: url('poza-salon.jpg') center/cover no-repeat; height: 300px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2em; }
-    .services ul { list-style: none; padding: 0; }
-    .services li { margin: 10px 0; padding: 10px; background: #f2f2f2; border-left: 5px solid #e6b0aa; }
-    footer { background: #e6b0aa; color: white; text-align: center; padding: 20px; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fffafc;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-image: url('https://source.unsplash.com/1600x900/?beauty,salon');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+
+    header h1, header p, .cta-button {
+      z-index: 2;
+      position: relative;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.5rem;
+    }
+
+    .cta-button {
+      background-color: #d4a5a5;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+
+    .services, .gallery, .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .services div, .reviews div {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    form input, form textarea, form select {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #d4a5a5;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #f8eaea;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Salon Mirele</h1>
-  <nav>
-    <a href="#acasa">Acasă</a>
-    <a href="#servicii">Servicii</a>
-    <a href="#galerie">Galerie</a>
-    <a href="#programari">Programări</a>
-    <a href="#despre">Despre</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <!-- HERO -->
+  <header>
+    <h1>MIRELLE</h1>
+    <p>Frumusețea începe cu tine</p>
+    <a href="#programare" class="cta-button">Programează-te acum</a>
+  </header>
 
-<div class="hero" id="acasa">
-  <div>Frumusețea începe aici</div>
-</div>
+  <!-- DESPRE -->
+  <section id="despre">
+    <h2>Despre Mirelle</h2>
+    <p>La Mirelle, fiecare detaliu contează. Salonul nostru este locul unde frumusețea se întâlnește cu profesionalismul. Cu o echipă dedicată și servicii de top, transformăm rutina de înfrumusețare într-o experiență de răsfăț.</p>
+  </section>
 
-<section id="servicii" class="services">
-  <h2>Serviciile Noastre</h2>
-  <ul>
-    <li>💇‍♀️ Coafură – de la 80 RON</li>
-    <li>💅 Manichiură & Pedichiură – de la 60 RON</li>
-    <li>💄 Machiaj Profesional – de la 120 RON</li>
-    <li>🧖‍♀️ Tratamente faciale – de la 100 RON</li>
-  </ul>
-</section>
+  <!-- SERVICII -->
+  <section id="servicii">
+    <h2>Serviciile Noastre</h2>
+    <div class="services">
+      <div><strong>Coafură & Styling</strong><br>Transformări moderne sau clasice</div>
+      <div><strong>Make-up Profesional</strong><br>Machiaj pentru evenimente speciale</div>
+      <div><strong>Manichiură & Pedichiură</strong><br>Cu produse de calitate premium</div>
+      <div><strong>Tratamente Faciale</strong><br>Reîntinerire și hidratare</div>
+    </div>
+  </section>
 
-<section id="galerie">
-  <h2>Galerie</h2>
-  <p>Aici vor fi fotografii cu lucrările noastre.</p>
-</section>
+  <!-- GALERIE -->
+  <section id="galerie">
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/400x300/?hair,beauty" alt="coafură">
+      <img src="https://source.unsplash.com/400x300/?makeup" alt="makeup">
+      <img src="https://source.unsplash.com/400x300/?nails,salon" alt="manichiură">
+    </div>
+  </section>
 
-<section id="programari">
-  <h2>Programări</h2>
-  <form>
-    <label>Nume: <input type="text" required></label><br><br>
-    <label>Telefon: <input type="tel" required></label><br><br>
-    <label>Serviciu dorit: <input type="text" required></label><br><br>
-    <label>Data și ora: <input type="datetime-local" required></label><br><br>
-    <button type="submit">Trimite</button>
-  </form>
-</section>
+  <!-- RECENZII -->
+  <section id="recenzii">
+    <h2>Ce spun clientele noastre</h2>
+    <div class="reviews">
+      <div>"O atmosferă de vis și servicii impecabile!"<br>– Andreea T.</div>
+      <div>"Recomand cu încredere! Profesionalism și atenție la detalii."<br>– Elena M.</div>
+      <div>"Cel mai frumos salon din oraș! Mereu revin cu drag."<br>– Roxana D.</div>
+    </div>
+  </section>
 
-<section id="despre">
-  <h2>Despre Salonul Mirele</h2>
-  <p>Suntem o echipă pasionată de frumusețe, oferind servicii de înaltă calitate pentru orice ocazie. Vă așteptăm cu drag!</p>
-</section>
+  <!-- PROGRAMARE -->
+  <section id="programare">
+    <h2>Fă o programare</h2>
+    <form>
+      <input type="text" name="nume" placeholder="Numele tău" required>
+      <input type="tel" name="telefon" placeholder="Telefon" required>
+      <select name="serviciu">
+        <option value="">Alege serviciul</option>
+        <option>Coafură</option>
+        <option>Make-up</option>
+        <option>Manichiură</option>
+        <option>Tratamente faciale</option>
+      </select>
+      <input type="date" name="data" required>
+      <textarea name="mesaj" placeholder="Mesaj opțional"></textarea>
+      <button type="submit">Trimite cererea</button>
+    </form>
+  </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>📍 Str. Georghe Asachi 52 </p>
-  <p>📞 0765 123 456</p>
-  <p>📧 contact@mirele.ro</p>
-  <p>⏰ Luni–Sâmbătă: 09:00 – 20:00</p>
-</section>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Adresă:</strong> Str. Eleganței Nr. 10, București</p>
+    <p><strong>Telefon:</strong> 0755 123 456</p>
+    <p><strong>Email:</strong> contact@mirelle.ro</p>
+    <p><strong>Instagram:</strong> <a href="#">@mirelle.beauty</a></p>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Salon Mirele | Urmărește-ne pe Instagram și Facebook!</p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Mirelle – Toate drepturile rezervate.
+  </footer>
 
 </body>
 </html>
